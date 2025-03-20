@@ -73,6 +73,7 @@ fieldset {
 .button {
   border: 1px solid #fff;
   color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-align: center;
@@ -129,7 +130,7 @@ fieldset {
   position: relative;
   width: 711px;
   height: 386px;
-  margin-bottom: 21px;
+  margin-bottom: 18px;
 }
 
 /* без добавления размеров для тега видео obj-fit не работал. */
@@ -151,9 +152,14 @@ fieldset {
 
 .search-form__fieldset-title {
   margin-bottom: 5px;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
+}
+
+.search-form__fieldset-title + .search-form__checkbox-list {
+  margin-top: 10px;
 }
 
 .search-form__label {
@@ -170,6 +176,15 @@ fieldset {
   outline-offset: 1px;
 }
 
+.search-form__label-text {
+  align-items: center;
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
+
 .search-form__textfield {
   width: 225px;
   border-style: none;
@@ -178,8 +193,9 @@ fieldset {
   padding: 2.5px 5px 2.5px 0;
   overflow: visible;
   color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 100%;
   background-color: transparent;
   appearance: none;
@@ -221,6 +237,14 @@ fieldset {
   cursor: pointer;
 }
 
+.search-form__label:active > .search-form__pseudo-checkbox::after {
+  display: block;
+}
+
+.search-form__label:active > .search-form__label-text:active {
+  text-decoration: none;
+}
+
 .search-form__label:hover > .search-form__label-text {
   text-decoration-line: underline;
 }
@@ -247,8 +271,8 @@ fieldset {
 
 .content__list-container {
   position: relative;
-  height: 298px;
-  overflow-y: scroll;
+  height: 296px;
+  overflow-y: auto;
 }
 
 .content__list {
@@ -259,8 +283,8 @@ fieldset {
 }
 
 .content__list-item {
-  padding-right: 3px;
-  padding-left: 3px;
+  padding-right: 2.5px;
+  padding-left: 2.5px;
 }
 
 .content__list-item:focus {
@@ -276,13 +300,17 @@ fieldset {
   text-decoration: none;
 }
 
+.content__card-link:active > .content__video-card {
+  background-color: #545050;
+}
+
 .content__video-card {
   display: flex;
   flex-direction: row;
   justify-content: start;
 }
 
-.content__video-card:hover .content__video-card-description {
+.content__video-card:hover .content__video-card-description-container {
   text-decoration: underline;
 }
 
@@ -316,6 +344,7 @@ fieldset {
 }
 
 .content__video-card-thumbnail {
+  flex-shrink: 1;
   width: 194px;
   height: 103px;
   object-fit: cover;
@@ -324,4 +353,10 @@ fieldset {
 
 .content__card-link_current .content__video-card {
   background-color: #545050;
+}
+
+/* помещено в конец, чтобы слили не переназнавались. */
+
+.content__card-link:active .content__video-card-description-container {
+  text-decoration: none;
 }
