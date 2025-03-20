@@ -9,13 +9,13 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -47,15 +47,15 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }
@@ -64,7 +64,6 @@ fieldset {
   border: none;
 }
 
-
 .page {
   display: flex;
   justify-content: center;
@@ -72,12 +71,12 @@ fieldset {
 }
 
 .button {
-  color: #fff;
-  background-color: transparent;
-  font-size: 18px;
-  font-weight: 700;
-  text-align: center;
   border: 1px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  background-color: transparent;
 }
 
 .button:hover {
@@ -86,8 +85,8 @@ fieldset {
 }
 
 .button:active {
-  background-color: #545050;
   text-decoration: none;
+  background-color: #545050;
 }
 
 .button:focus {
@@ -99,12 +98,10 @@ fieldset {
   outline-offset: 1px;
 }
 
-
-
 .search-form__submit-button {
+  justify-self: end;
   width: 194px;
   height: 34px;
-  justify-self: end;
 }
 
 .more-button {
@@ -115,13 +112,13 @@ fieldset {
 }
 
 .content {
-  width: 1140px;
-  height: 534px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: end;
   gap: 30px;
   box-sizing: border-box;
+  width: 1140px;
+  height: 534px;
 }
 
 .result {
@@ -153,10 +150,10 @@ fieldset {
 }
 
 .search-form__fieldset-title {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 100%;
   margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
 }
 
 .search-form__label {
@@ -175,17 +172,17 @@ fieldset {
 
 .search-form__textfield {
   width: 225px;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 100%;
-  color: #fff;
-  background-color: transparent;
   border-style: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  appearance: none;
   padding: 2.5px 5px 2.5px 0;
   overflow: visible;
+  color: #fff;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 100%;
+  background-color: transparent;
+  appearance: none;
 }
 
 .search-form__textfield:focus {
@@ -200,21 +197,21 @@ fieldset {
 
 .search-form__pseudo-checkbox {
   position: relative;
+  align-self: center;
   width: 19px;
   height: 19px;
-  border: 1px solid #fff;
-  align-self: center;
   margin-right: 5px;
   margin-bottom: 5px;
+  border: 1px solid #fff;
 }
 
 .search-form__pseudo-checkbox::after {
-  position: absolute;
   content: "";
+  position: absolute;
   inset: 1px 1px 1px 1px;
-  background-color: #fff;
   display: none;
-  }
+  background-color: #fff;
+}
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   display: block;
@@ -229,17 +226,17 @@ fieldset {
 }
 
 .content__details {
-  grid-area: auto;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  grid-area: auto;
   gap: 26px;
+  width: 100%;
 }
 
 .title {
   font-family: Oswald;
-  font-size: 75px;
   font-weight: 700;
+  font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
 }
@@ -257,13 +254,13 @@ fieldset {
 .content__list {
   display: flex;
   flex-direction: column;
-  width: 395px;
   gap: 30px;
+  width: 395px;
 }
 
 .content__list-item {
-  padding-left: 3px;
   padding-right: 3px;
+  padding-left: 3px;
 }
 
 .content__list-item:focus {
@@ -275,8 +272,8 @@ fieldset {
 }
 
 .content__card-link {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
 }
 
 .content__video-card {
@@ -293,28 +290,27 @@ fieldset {
   outline: none;
 }
 
-
 .content__video-card-description-container {
   flex-grow: 1;
   width: 196px;
 }
 
 .content__video-card-title {
+  margin-bottom: 6px;
+  overflow: hidden;
   font-family: Oswald;
-  font-size: 30px;
   font-weight: 700;
+  font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
-  overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 6px;
 }
 
 .content__video-card-description {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 16.2px;
   overflow: hidden;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
   text-overflow: ellipsis;
   line-clamp: 3;
 }
