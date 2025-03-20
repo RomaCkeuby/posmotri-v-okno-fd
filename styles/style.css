@@ -132,7 +132,7 @@ fieldset {
   position: relative;
   width: 711px;
   height: 386px;
-  margin-bottom: 16px;
+  margin-bottom: 21px;
 }
 
 /* без добавления размеров для тега видео obj-fit не работал. */
@@ -164,8 +164,6 @@ fieldset {
   width: fit-content;
 }
 
-/* Разобраться с фокусами */
-
 .search-form__label:focus {
   outline: none;
 }
@@ -175,11 +173,9 @@ fieldset {
   outline-offset: 1px;
 }
 
-/* Разобраться с плейсхолдером */
-
 .search-form__textfield {
   width: 225px;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 100%;
   color: #fff;
@@ -188,7 +184,7 @@ fieldset {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   appearance: none;
-  padding: 2.5px 14px 2.5px 0;
+  padding: 2.5px 5px 2.5px 0;
   overflow: visible;
 }
 
@@ -218,7 +214,7 @@ fieldset {
   inset: 1px 1px 1px 1px;
   background-color: #fff;
   display: none;
-}
+  }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   display: block;
